@@ -26,21 +26,33 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 
 const sandwichMaker = () => {
-  let begin = 'One sandwich with tomato';
-  let and = ' and ';
-
-  function adder(string) {
-    return begin = begin + and + string;
+  let order = "One sandwich with tomato"
+  return function (item) {
+    order += " and " + item;
+    return order;
   }
-  return adder;
 }
+  
+  
+  // let begin = 'One sandwich with tomato';
+  // let and = ' and ';
 
-let sandwich = sandwichMaker();
+  // function adder(string) {
+  //   return begin = begin + and + string;
+  // }
+  // return adder;
+// }
 
+// let sandwich = sandwichMaker();
+
+let sandwich = sandwichMaker(); // => returns a function
 console.log(sandwich("spinach")) // => "One sandwich with tomato and spinach"
-console.log(sandwich("jelly")) // => "One sandwich with tomato and spinach"
+console.log(sandwich("jelly")) // => "One sandwich with tomato and spinach and jelly"
+console.log(sandwich("bread")) // => "One sandwich with tomato and spinach and jelly and bread"
 
-
+// Another Sandwich:
+let sandwich2 = sandwichMaker(); // => returns a function
+sandwich2("pb") // => "One sandwich with tomato and pb"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

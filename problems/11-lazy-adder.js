@@ -25,24 +25,14 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 // Your code here
 
 let lazyAdder = (firstNum) => {
-  return secondNum => {
-    return thirdNum => {
-      return firstNum + secondNum + thirdNum;
+  let sum = firstNum;
+  return (secondNum) => {
+    sum += secondNum;
+    return (thirdNum) => {
+      sum += thirdNum; 
+      return sum;
     }
   }
-  // let sum = 0;
-  // let count = 0;
-  // let adder = (num) => {
-  //   sum = sum + num;
-  // }
-  // if (count < 2) {
-  //   count++
-  //   return adder;
-  // } else if (count === 2) {
-  //   return sum;
-  // }
-  // return ;
-  // return 
 }
 
 let firstAdd = lazyAdder(1);

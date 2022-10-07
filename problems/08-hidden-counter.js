@@ -22,19 +22,19 @@ hidden2(); // returns 1
 const hiddenCounter = () => {
   let count = 0;
 
-  function counter() {
+  return counter = () => {
     count++;
     return count;
   }
 
-  return counter;
+  // return counter;
 
 }
 
 let hidden1 = hiddenCounter();
 
-hidden1(); // returns 1
-hidden1(); // returns 2
+console.log(hidden1()); // returns 1
+console.log(hidden1()); // returns 2
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
