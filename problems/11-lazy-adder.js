@@ -25,12 +25,17 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 // Your code here
 
 let lazyAdder = (firstNum) => {
-  let sum = firstNum;
+  // let sum = firstNum;
+  // return (secondNum) => {
+  //   sum += secondNum;
+  //   return (thirdNum) => {
+  //     sum += thirdNum; 
+  //     return sum;
+  //   }
+  // }
   return (secondNum) => {
-    sum += secondNum;
     return (thirdNum) => {
-      sum += thirdNum; 
-      return sum;
+      return firstNum + secondNum + thirdNum;
     }
   }
 }
